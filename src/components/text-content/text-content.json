@@ -1,0 +1,12 @@
+{
+  "collectionName": "components_text_content_text_contents",
+  "info": {
+    "displayName": "TextContent"
+  },
+  "options": {},
+  "attributes": {
+    "rte": {
+      "type": "richtext"
+    }
+  }
+}

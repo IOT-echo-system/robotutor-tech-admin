@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_sub_header_sub_headers",
+  "info": {
+    "displayName": "SubHeader"
+  },
+  "options": {},
+  "attributes": {
+    "Text": {
+      "type": "string"
+    },
+    "CTA": {
+      "type": "component",
+      "repeatable": false,
+      "component": "cta.cta"
+    }
+  }
+}

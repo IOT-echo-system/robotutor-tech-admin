@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_sections_sections",
+  "info": {
+    "displayName": "Section",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "navLinks": {
+      "type": "component",
+      "repeatable": true,
+      "component": "navlink.nav-link"
+    }
+  }
+}

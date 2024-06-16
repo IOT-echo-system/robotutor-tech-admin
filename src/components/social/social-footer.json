@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_social_social_footers",
+  "info": {
+    "displayName": "Social footer"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "socials": {
+      "displayName": "Social",
+      "type": "component",
+      "repeatable": true,
+      "component": "socials.social",
+      "required": true
+    }
+  }
+}
