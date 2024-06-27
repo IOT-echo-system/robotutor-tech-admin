@@ -864,10 +864,19 @@ export interface ApiPagePage extends Schema.CollectionType {
     draftAndPublish: true;
   };
   attributes: {
-    Header: Attribute.DynamicZone<
+    header: Attribute.DynamicZone<
       ['hero-banner.hero-banner', 'sub-header.sub-header']
     >;
-    MainContent: Attribute.DynamicZone<['text-content.text-content']>;
+    mainContent: Attribute.DynamicZone<
+      [
+        'text-content.text-content',
+        'text-with-cta.text-with-cta',
+        'content-cards.content-cards'
+      ]
+    >;
+    title: Attribute.String & Attribute.Required;
+    slug: Attribute.UID<'api::page.page', 'title'>;
+    ctaBanner: Attribute.DynamicZone<['text-with-cta.text-with-cta']>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

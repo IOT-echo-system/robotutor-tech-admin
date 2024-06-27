@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_content_cards_content_cards",
+  "info": {
+    "displayName": "Content Cards",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "string"
+    },
+    "cards": {
+      "displayName": "Card",
+      "type": "component",
+      "repeatable": true,
+      "component": "card.card"
+    }
+  }
+}

@@ -1,31 +1,46 @@
 {
   "collectionName": "components_hero_banner_hero_banners",
   "info": {
-    "displayName": "Hero Banner"
+    "displayName": "Hero Banner",
+    "description": ""
   },
   "options": {},
   "attributes": {
     "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
     },
-    "Title": {
+    "title": {
       "type": "string"
     },
-    "Subtitle": {
+    "subtitle": {
       "type": "string"
     },
-    "CTA": {
+    "cta": {
       "displayName": "CTA",
       "type": "component",
       "repeatable": false,
       "component": "cta.cta"
+    },
+    "mobileImage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "darkText": {
+      "type": "boolean",
+      "default": false,
+      "required": true
     }
   }
 }

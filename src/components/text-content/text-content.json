@@ -1,12 +1,23 @@
 {
   "collectionName": "components_text_content_text_contents",
   "info": {
-    "displayName": "TextContent"
+    "displayName": "TextContent",
+    "description": ""
   },
   "options": {},
   "attributes": {
     "rte": {
       "type": "richtext"
+    },
+    "width": {
+      "type": "enumeration",
+      "enum": [
+        "Center",
+        "Boxed",
+        "FullWidth"
+      ],
+      "required": true,
+      "default": "Boxed"
     }
   }
 }

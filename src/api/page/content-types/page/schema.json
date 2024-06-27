@@ -12,17 +12,33 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "Header": {
+    "header": {
       "type": "dynamiczone",
       "components": [
         "hero-banner.hero-banner",
         "sub-header.sub-header"
       ]
     },
-    "MainContent": {
+    "mainContent": {
       "type": "dynamiczone",
       "components": [
-        "text-content.text-content"
+        "text-content.text-content",
+        "text-with-cta.text-with-cta",
+        "content-cards.content-cards"
+      ]
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title"
+    },
+    "ctaBanner": {
+      "type": "dynamiczone",
+      "components": [
+        "text-with-cta.text-with-cta"
       ]
     }
   }

@@ -1,24 +1,18 @@
 {
   "collectionName": "components_cta_ctas",
   "info": {
-    "displayName": "CTA"
+    "displayName": "CTA",
+    "description": ""
   },
   "options": {},
   "attributes": {
-    "type": {
-      "type": "enumeration",
-      "enum": [
-        "Button",
-        "Link"
-      ]
-    },
-    "Text": {
+    "text": {
       "type": "string"
     },
-    "Link": {
+    "link": {
       "type": "string"
     },
-    "NewTab": {
+    "newTab": {
       "type": "boolean",
       "default": false
     }
