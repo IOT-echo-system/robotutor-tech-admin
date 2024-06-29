@@ -4,7 +4,8 @@
   "info": {
     "singularName": "site-info",
     "pluralName": "site-infos",
-    "displayName": "SiteInfo"
+    "displayName": "SiteInfo",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -18,17 +19,10 @@
     "subtitle": {
       "type": "string"
     },
-    "description": {
-      "type": "text",
-      "required": true
-    },
-    "metaImage": {
-      "allowedTypes": [
-        "images"
-      ],
-      "type": "media",
-      "multiple": false,
-      "required": true
+    "seo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.seo"
     }
   }
 }

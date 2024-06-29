@@ -17,6 +17,9 @@ const populate = {
   },
   ctaBanner: {
     populate: 'cta'
+  },
+  seo: {
+    populate: ['metaImage']
   }
 }
 

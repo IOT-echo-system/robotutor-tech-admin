@@ -788,6 +788,54 @@ export interface PluginUsersPermissionsUser extends Schema.CollectionType {
   };
 }
 
+export interface ApiContactContact extends Schema.CollectionType {
+  collectionName: 'contacts';
+  info: {
+    singularName: 'contact';
+    pluralName: 'contacts';
+    displayName: 'contact';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    name: Attribute.String & Attribute.Required;
+    email: Attribute.Email & Attribute.Required;
+    subject: Attribute.String;
+    message: Attribute.Text &
+      Attribute.Required &
+      Attribute.SetMinMaxLength<{
+        minLength: 4;
+      }>;
+    consent: Attribute.Boolean & Attribute.Required;
+    status: Attribute.Enumeration<['CREATED', 'PENDING', 'RESOLVED']> &
+      Attribute.Required &
+      Attribute.DefaultTo<'CREATED'>;
+    phone: Attribute.String &
+      Attribute.Required &
+      Attribute.SetMinMaxLength<{
+        minLength: 10;
+        maxLength: 10;
+      }>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::contact.contact',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::contact.contact',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiFooterFooter extends Schema.SingleType {
   collectionName: 'footers';
   info: {
@@ -852,6 +900,43 @@ export interface ApiMainMenuMainMenu extends Schema.SingleType {
   };
 }
 
+export interface ApiOfficeLocationOfficeLocation extends Schema.SingleType {
+  collectionName: 'office_locations';
+  info: {
+    singularName: 'office-location';
+    pluralName: 'office-locations';
+    displayName: 'office-location';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    companyName: Attribute.String;
+    address1: Attribute.String;
+    address2: Attribute.String;
+    address3: Attribute.String;
+    address4: Attribute.String;
+    phone: Attribute.String;
+    email: Attribute.Email;
+    mapLink: Attribute.String;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::office-location.office-location',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::office-location.office-location',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiPagePage extends Schema.CollectionType {
   collectionName: 'pages';
   info: {
@@ -874,9 +959,9 @@ export interface ApiPagePage extends Schema.CollectionType {
         'content-cards.content-cards'
       ]
     >;
-    title: Attribute.String & Attribute.Required;
-    slug: Attribute.UID<'api::page.page', 'title'>;
+    slug: Attribute.UID & Attribute.Required;
     ctaBanner: Attribute.DynamicZone<['text-with-cta.text-with-cta']>;
+    seo: Attribute.Component<'shared.seo'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -893,6 +978,7 @@ export interface ApiSiteInfoSiteInfo extends Schema.SingleType {
     singularName: 'site-info';
     pluralName: 'site-infos';
     displayName: 'SiteInfo';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -900,8 +986,7 @@ export interface ApiSiteInfoSiteInfo extends Schema.SingleType {
   attributes: {
     title: Attribute.String & Attribute.Required;
     subtitle: Attribute.String;
-    description: Attribute.Text & Attribute.Required;
-    metaImage: Attribute.Media<'images'> & Attribute.Required;
+    seo: Attribute.Component<'shared.seo'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -938,8 +1023,10 @@ declare module '@strapi/types' {
       'plugin::users-permissions.permission': PluginUsersPermissionsPermission;
       'plugin::users-permissions.role': PluginUsersPermissionsRole;
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
+      'api::contact.contact': ApiContactContact;
       'api::footer.footer': ApiFooterFooter;
       'api::main-menu.main-menu': ApiMainMenuMainMenu;
+      'api::office-location.office-location': ApiOfficeLocationOfficeLocation;
       'api::page.page': ApiPagePage;
       'api::site-info.site-info': ApiSiteInfoSiteInfo;
     }

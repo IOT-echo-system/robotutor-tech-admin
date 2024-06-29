@@ -1,0 +1,39 @@
+{
+  "kind": "singleType",
+  "collectionName": "office_locations",
+  "info": {
+    "singularName": "office-location",
+    "pluralName": "office-locations",
+    "displayName": "office-location"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "companyName": {
+      "type": "string"
+    },
+    "address1": {
+      "type": "string"
+    },
+    "address2": {
+      "type": "string"
+    },
+    "address3": {
+      "type": "string"
+    },
+    "address4": {
+      "type": "string"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "email": {
+      "type": "email"
+    },
+    "mapLink": {
+      "type": "string"
+    }
+  }
+}
