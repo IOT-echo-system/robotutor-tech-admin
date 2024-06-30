@@ -8,4 +8,4 @@ docker buildx build --no-cache --platform=linux/amd64 -t shiviraj/robotutor-tech
 rm -rf node_modules
 npm install --platform=linuxmusl --arch=arm64 sharp
 npm run build
-docker buildx build --no-cache --platform=linux/arm64 -t shiviraj/robotutor-tech-admin:aarm64 --push .
+docker buildx build --no-cache --platform=linux/arm64 -t shiviraj/robotutor-tech-admin:arm64 --push .
