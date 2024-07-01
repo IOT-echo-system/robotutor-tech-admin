@@ -108,6 +108,7 @@ export interface SharedSeo extends Schema.Component {
   info: {
     displayName: 'seo';
     icon: 'search';
+    description: '';
   };
   attributes: {
     metaTitle: Attribute.String &
@@ -128,6 +129,7 @@ export interface SharedSeo extends Schema.Component {
     structuredData: Attribute.JSON;
     metaViewport: Attribute.String;
     canonicalURL: Attribute.String;
+    hostname: Attribute.String;
   };
 }
 
