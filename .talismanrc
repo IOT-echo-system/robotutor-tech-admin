@@ -1,4 +1,8 @@
 fileignoreconfig:
 - filename: package-lock.json
-  checksum: b389bb04e553c959b9907fc51de3a52694a116dbed7efdec15cdfd5000a79a98
+  checksum: f378dd26fd95bb4468273d5a118b7ac6bf9ec5e39458c863551837550ab35be3
+- filename: src/service/emailService.ts
+  checksum: c328faac898f5d505f30c257acefdbc01e40445fc9f6d6733949a7fa29fdde94
+- filename: src/utils/utils.ts
+  checksum: 14483f9f1797795ff156eff90a072a761ab5fd723eb113077f43f328f0072058
 version: ""

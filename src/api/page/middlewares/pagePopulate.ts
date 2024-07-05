@@ -1,7 +1,3 @@
-/**
- * `pagePopulate` middleware
- */
-
 import {Strapi} from '@strapi/strapi';
 
 const populate = {
@@ -24,7 +20,6 @@ const populate = {
 }
 
 export default (config, {strapi}: { strapi: Strapi }) => {
-  // Add your own logic here.
   return async (ctx, next) => {
     strapi.log.info('In pagePopulate middleware.');
     ctx.query = {

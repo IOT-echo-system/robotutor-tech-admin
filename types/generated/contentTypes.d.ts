@@ -818,6 +818,7 @@ export interface ApiContactContact extends Schema.CollectionType {
         minLength: 10;
         maxLength: 10;
       }>;
+    solution: Attribute.Text;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

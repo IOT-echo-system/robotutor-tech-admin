@@ -47,6 +47,9 @@
       "required": true,
       "maxLength": 10,
       "minLength": 10
+    },
+    "solution": {
+      "type": "text"
     }
   }
 }
